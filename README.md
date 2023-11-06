@@ -8,3 +8,10 @@
 ##
 Dê uma olhada:
 (https://gabrielvesal.github.io/Resume/)
+###
+Techs usadas:
+<div>
+    <img height='50em' src="https://cdn.worldvectorlogo.com/logos/html-1.svg"svg">
+    <img height='50em' src="https://cdn.worldvectorlogo.com/logos/css-3.svg">                                                              
+    <img height='50em' src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg">  
+    
