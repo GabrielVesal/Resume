@@ -1,230 +1,212 @@
+/* Estilos gerais */
 body {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  word-wrap: break-word;
-  margin-left: 20px;
-  margin-right: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+  line-height: 1.6;
+  background-color: #f8f9fa;
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
-#img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
+/* Cabeçalho */
+.profile-img {
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   opacity: 0.8;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
 }
 
-#img img {
-  width: 106%;
+.profile-img img {
+  width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 h1 {
-  font-size: 58px;
-  font-family: verdana;
+  font-weight: 700;
+  color: #000000;
   opacity: 0.8;
-  text-align: center;
-  line-height: 0.8;
-  margin-bottom: 50px;
-  margin-top: 30px;
 }
 
-.hr1 {
-  max-width: 920px;
-  height: 4.8px;
-  width: 100%;
-  background-color: gray;
-  opacity: 0.5;
-}
-
-#profession {
-  font-size: 43px;
+/* Seção Profissão */
+.profession-title {
+  font-size: 2rem;
+  font-weight: 300;
   opacity: 0.8;
-  font-family: "Calibri light";
-  line-height: 1;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin: 0;
 }
 
-#github,
-#linkedin,
-#instagram {
-  opacity: 0.2;
-  transition-duration: 0.4s;
-  height: 50px;
-  display: flex;
-}
-
-#linkedin:hover,
-#instagram:hover,
-#github:hover {
-  opacity: 1;
-}
-
-.hr2 {
-  max-width: 920px;
-  height: 2px;
-  width: 100%;
-  background-color: gray;
-  opacity: 0.5;
-}
-
-#bio {
-  opacity: 0.8;
-  font-size: 25px;
-  margin-top: 35px;
-}
-
-button {
-  height: 70px;
-  width: 260px;
-  border-radius: 5px;
-  opacity: 0.9;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-  margin: 0 auto;
-  display: block;
-  transition-duration: 0.4s;
-  font-family: "Calibri light";
-  margin-top: 35px;
-  margin-bottom: 45px;
-}
-
-a,
-button {
+.social-icons a {
+  color: #6c757d;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
   text-decoration: none;
 }
 
-button:hover {
-  background-color: #050705;
-  color: white;
+.social-icons a:hover {
+  opacity: 1;
 }
 
-h2 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 900;
-  font-size: 32px;
-  margin: 0;
+/* Seção Bio */
+.bio-text {
+  font-size: 1.25rem;
   opacity: 0.8;
 }
 
-.paragraph {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  opacity: 0.8;
-  margin-top: 25px;
-  font-weight: 750;
-  font-size: 30px;
-  margin-top: 35px;
-  margin-bottom: 1px;
+.btn {
+  transition: all 0.3s ease;
+  font-weight: 300;
 }
 
-.paragraph1 {
+.btn-dark {
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.btn-outline-dark {
+  border-color: #212529;
+  color: #212529;
+}
+
+.btn-outline-dark:hover {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* Seções comuns */
+.section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+/* Experiência */
+.experience-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-top: 1.5rem;
+}
+
+.experience-period {
+  font-weight: 600;
+  font-size: 1.25rem;
   opacity: 0.9;
-  font-weight: 750;
-  font-size: 25px;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
-.paragraph2 {
+
+.experience-company {
+  font-weight: 300;
+  font-size: 1.1rem;
   opacity: 0.9;
-  font-weight: 1;
-  font-size: 22px;
-  margin-top: 1px;
-  margin-bottom: 45px;
+  margin-bottom: 2rem;
 }
 
-#projects {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* Formação */
+.education-institution {
+  font-weight: 600;
+  font-size: 1.5rem;
   opacity: 0.8;
-  margin-top: 35px;
-  margin-bottom: 45px;
-  font-weight: 750;
-  font-size: 30px;
-  text-align: center;
+  margin-top: 1.5rem;
 }
 
-#copyright {
-  font-size: 20px;
+.education-course {
+  font-weight: 600;
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.education-status {
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+/* Projetos */
+.project-link a {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #212529;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link a:hover {
+  color: #0d6efd;
+}
+
+/* Habilidades */
+.skill-category {
+  font-weight: 600;
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.skill-items {
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Rodapé */
+.copyright-text {
+  font-size: 1rem;
   opacity: 0.7;
-  font-family: "Calibri light";
-  margin-top: 35px;
-  margin-bottom: 45px;
-  text-align: center;
+  font-weight: 300;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
+  .profession-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
   h1 {
-    font-size: 32px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
   }
 
-  #profession {
-    font-size: 20px;
-  }
-
-  #bio {
-    font-size: 16px;
+  .bio-text {
+    font-size: 1rem;
     text-align: center;
   }
 
-  button {
-    height: 50px;
-    width: 200px;
-    font-size: 18px;
+  .experience-title,
+  .education-institution {
+    font-size: 1.25rem;
   }
 
-  .paragraph {
-    font-size: 20px;
+  .experience-period,
+  .education-course,
+  .project-link a {
+    font-size: 1.1rem;
   }
 
-  .paragraph1 {
-    font-size: 18px;
+  .experience-company,
+  .education-status,
+  .skill-items {
+    font-size: 1rem;
   }
 
-  .paragraph2 {
-    font-size: 16px;
+  .section-title {
+    font-size: 1.5rem;
   }
 
-  h2 {
-    font-size: 24px;
+  .profile-img {
+    width: 120px;
+    height: 120px;
   }
 
-  #img {
-    width: 100px;
-    height: 100px;
-  }
-
-  #img img {
+  .btn {
     width: 100%;
-    height: auto;
-  }
-
-  .container {
-    padding: 10px;
-  }
-
-  #github, #linkedin, #instagram {
-    height: 35px;
-  }
-
-  #copyright {
-    font-size: 14px;
   }
 }
-
-
