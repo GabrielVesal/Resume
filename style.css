@@ -1,212 +1,400 @@
-/* Estilos gerais */
+/* Reset e configurações base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #000000;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* Cabeçalho */
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
   overflow: hidden;
-  opacity: 0.8;
+  border: 3px solid #000;
 }
 
 .profile-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
-h1 {
+header h1 {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #000000;
-  opacity: 0.8;
+  color: #000;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
 }
 
-/* Seção Profissão */
+/* Seção profissão e redes sociais */
+.profession-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .profession-title {
-  font-size: 2rem;
-  font-weight: 300;
-  opacity: 0.8;
-  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .social-icons a {
-  color: #6c757d;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  color: #000;
   text-decoration: none;
+  font-size: 1.5rem;
+  transition: opacity 0.2s ease;
 }
 
 .social-icons a:hover {
-  opacity: 1;
+  opacity: 0.6;
 }
 
-/* Seção Bio */
+/* Seção bio */
+.bio-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
 .bio-text {
-  font-size: 1.25rem;
-  opacity: 0.8;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.bio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  transition: all 0.3s ease;
-  font-weight: 300;
+  padding: 12px 24px;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.btn-dark {
-  background-color: #212529;
-  border-color: #212529;
-}
-
-.btn-outline-dark {
-  border-color: #212529;
-  color: #212529;
-}
-
-.btn-outline-dark:hover {
-  background-color: #212529;
+.btn:hover {
+  background: #000;
   color: #fff;
 }
 
-/* Seções comuns */
+/* Seções */
+.section-card {
+  margin-bottom: 50px;
+}
+
 .section-title {
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 2rem;
-  opacity: 0.8;
+  color: #000;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 /* Experiência */
+.experience-item {
+  margin-bottom: 40px;
+}
+
 .experience-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  margin-top: 1.5rem;
+  color: #000;
+  margin-bottom: 5px;
 }
 
 .experience-period {
-  font-weight: 600;
-  font-size: 1.25rem;
-  opacity: 0.9;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.experience-company {
-  font-weight: 300;
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+.experience-description {
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.experience-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-item li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.experience-item li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: bold;
 }
 
 /* Formação */
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.education-item:hover {
+  border-color: #000;
+}
+
+.education-icon {
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.education-content {
+  flex: 1;
+}
+
 .education-institution {
+  font-size: 1.1rem;
   font-weight: 600;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  margin-top: 1.5rem;
+  color: #000;
+  margin-bottom: 5px;
 }
 
 .education-course {
-  font-weight: 600;
-  font-size: 1.25rem;
-  opacity: 0.9;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .education-status {
-  font-weight: 300;
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Projetos */
-.project-link a {
+.project-item {
+  margin-bottom: 30px;
+  padding: 25px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.project-item:hover {
+  border-color: #000;
+}
+
+.project-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  font-size: 1.25rem;
-  color: #212529;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.project-link a {
+  color: #000;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease;
 }
 
 .project-link a:hover {
-  color: #0d6efd;
+  opacity: 0.6;
 }
 
 /* Habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
 .skill-category {
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.skill-category:hover {
+  border-color: #000;
+}
+
+.skill-category-title {
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 1.25rem;
-  opacity: 0.9;
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .skill-items {
-  font-weight: 300;
-  font-size: 1.1rem;
-  opacity: 0.9;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
-/* Rodapé */
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 60px;
+}
+
 .copyright-text {
-  font-size: 1rem;
-  opacity: 0.7;
-  font-weight: 300;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+  
+  header {
+    margin-bottom: 40px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
   .profession-title {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .social-icons {
-    justify-content: center;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .bio-text {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .experience-title,
-  .education-institution {
-    font-size: 1.25rem;
-  }
-
-  .experience-period,
-  .education-course,
-  .project-link a {
     font-size: 1.1rem;
   }
-
-  .experience-company,
-  .education-status,
-  .skill-items {
+  
+  .bio-text {
     font-size: 1rem;
   }
-
-  .section-title {
-    font-size: 1.5rem;
+  
+  .bio-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
+  
   .btn {
     width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .education-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .education-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .social-icons {
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    font-size: 1.3rem;
   }
 }
